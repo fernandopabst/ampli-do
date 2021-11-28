@@ -1,0 +1,19 @@
+{
+  "dataServiceGeneratorVersion": "0.10.2",
+  "appInfo": {
+    "name": "test-ethics",
+    "description": "ttt",
+    "version": "6uq2akb5",
+    "id": "ckwdmb08m1571531bs6xd8iye27",
+    "url": "https://app.amplication.com/ckwdmb08m1571531bs6xd8iye27",
+    "settings": {
+      "dbHost": "localhost",
+      "dbName": "",
+      "dbPassword": "admin",
+      "dbPort": 5432,
+      "dbUser": "admin",
+      "appId": "ckwdmb08m1571531bs6xd8iye27",
+      "authProvider": "Jwt"
+    }
+  }
+}
