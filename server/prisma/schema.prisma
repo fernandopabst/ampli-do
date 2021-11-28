@@ -1,0 +1,63 @@
+datasource postgres {
+  provider = "postgresql"
+  url      = env("POSTGRESQL_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  createdAt DateTime @default(now())
+  firstName String?
+  id        String   @id @default(cuid())
+  lastName  String?
+  password  String
+  roles     String[]
+  updatedAt DateTime @updatedAt
+  username  String   @unique
+}
+
+model TestEthic {
+  amendmentNumber                  Int?
+  appCreatedBy                     Int?
+  appModifiedBy                    String?
+  approvalDate                     DateTime?
+  approvalExpiryDate               DateTime?
+  approvalReference                String?
+  approvalRequirementBy            String?
+  approvalValidFor                 Int?
+  chairsAction                     Float?
+  created                          Float?
+  createdAt                        DateTime  @default(now())
+  createdBy                        String?
+  decisionNotificationWorkflow_2   String?
+  doNotUseApprovalExpiryDate       DateTime?
+  doNotUsePiName                   String?
+  doNotUsePreviousStatus           String?
+  emailComments                    String?
+  enterpriseProject                String?
+  ethicsPanelView                  String?
+  firstApproved                    Int?
+  healthOfSport                    String?
+  id                               String    @id @default(cuid())
+  institution                      String?
+  itemType                         String?
+  meetingDate                      DateTime?
+  migrateFlow                      String?
+  modified                         Float?
+  modifiedBy                       String?
+  newApplicationRequest            String?
+  notes                            Int?
+  path                             String?
+  principalInvestigator            String?
+  projectStatus                    String?
+  projectSupervisor                String?
+  projectTitle                     String?
+  projectType                      String?
+  requiresChairsAction             Float?
+  reSubmission                     Float?
+  specialConsideration             String?
+  testEmailToPrincipleInvestigator String?
+  updatedAt                        DateTime  @updatedAt
+}
